@@ -15,6 +15,5 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #}
-select descr, lieu_trav, type_lieu, don_loc_12
-from {{ var("database_paie") }}.dbo.pai_tab_lieu_trav
-with (nolock)
+select corp_empl, descr, corp_empl_percos, nb_hres_an, nb_hre_sem, date_deb, date_fin
+from {{ var("database_paie") }}.dbo.pai_tab_corp_empl_date
